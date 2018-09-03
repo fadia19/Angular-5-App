@@ -1,0 +1,43 @@
+.login-form{
+    float: none;
+    display: block;
+    margin : 5% auto;
+    border : 1px rgb(190, 190, 190) solid;
+    border-radius: 20px;
+    height : 100%;
+    padding : 20px;
+}
+.login-form h2{
+    text-align: center;
+    margin : 5% 0 10% 0;
+    color : rgb(100, 100, 100);
+    font-weight: lighter;
+}
+.login-form label{
+    color : rgb(39, 94, 146);
+    font-weight: 500;
+}
+
+.login-form .buttons .btn{
+    padding : 10px 20px 10px 20px;
+    margin : 5px;
+}
+.login-form .forgot-password{
+    text-align: center; 
+}
+.alert {
+    text-align: center;
+}
+.captcha img{
+    margin  : 0 auto;
+    float: none;
+    display: block;
+}
+.captcha div{
+    margin-top : 10px;
+} 
+.captcha .btn{
+    margin : 0 auto;
+    display: block;
+    float: none;
+}

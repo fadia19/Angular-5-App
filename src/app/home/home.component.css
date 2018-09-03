@@ -1,0 +1,50 @@
+/* Navbar Styles */
+.navbar{
+    background: #353535 !important;
+}
+.navbar .nav-link{
+    text-decoration: none;
+    color : rgb(201, 200, 200);
+}
+.navbar .nav-link:hover{
+    color :white;
+}
+/* ---------------------------------------- */
+/* Sidebar Styles */
+.sidebar{
+    min-width :9%;
+    height : 100%;
+    position : absolute;
+    background: #353535!important;
+}
+.sidebar ul{
+    list-style: none;
+    padding : 10px;
+    margin : 20px;
+}
+.sidebar ul li {
+    color : rgb(230, 219, 219);
+    font-size :  1em;
+    padding : 20px;
+    display: block;
+    float: none;
+    text-align: center;
+    margin : 0 auto;
+}
+.sidebar ul li:hover{
+    color : white;
+    cursor: pointer;
+}
+/* ------------------------------------- */
+/* Content Styles */
+.container {
+    padding : 0 20px;
+    margin-top : 0;   
+}
+/* ----------------------------------------- */
+/* Responsive Screen */
+@media screen and (max-width : 1190px ){
+    .sidebar{
+        display: none ;
+    }
+}

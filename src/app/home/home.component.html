@@ -1,0 +1,62 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="./../../assets/img/cartoons.png" width="15%" height="15%"> &nbsp;Welcome {{username}} !</a>
+  <ul class="nav">
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class="fa fa-cogs"></i> Settings</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="login" class="nav-link" (click)="Logout()">
+        <i class="fa fa-sign-out-alt"></i> Logout </a>
+    </li>
+  </ul>
+</nav>
+<div class="sidebar">
+  <ul>
+    <li><i class="fa fa-home"></i> &nbsp;Home</li>
+    <li><i class="fa fa-user"></i> &nbsp;Profile</li>
+    <li><i class="fa fa-mobile-alt"></i> &nbsp;Contacts</li>
+    <li><i class="fa fa-info"></i> &nbsp;About Us</li>
+  </ul>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <form class="form form-inline offset-1" ngNativeValidate>
+      <div class="form-group col-md-3">
+        <input autocomplete="off" class="form-control" [(ngModel)]="firstName" name="firstName" placeholder="Enter First Name..."
+          type="text" required>
+      </div>
+      <div class="form-group col-md-3">
+        <input autocomplete="off" class="form-control" [(ngModel)]="lastName" name="lastName" type="text" placeholder="Enter Last Name..."
+          required>
+      </div>
+      <div class="form-group col-md-3">
+        <input autocomplete="off" class="form-control" [(ngModel)]="gender" name="gender" placeholder="Enter Gender ..." type="text">
+      </div>
+      <div class="form-group col-md-3">
+        <input autocomplete="off" class="form-control" [(ngModel)]="country" name="country" placeholder="Enter Country ..." type="text">
+      </div>
+      <br><br><br>
+      <div class="form-group col-md-3">
+        <input autocomplete="off" class="form-control" [(ngModel)]="address" name="address" placeholder="Enter Address ..." type="text">
+      </div>
+      <div class="col-md-3 col-xs-6 form-group">
+        <input class="btn btn-primary" (click)="createNewRowData()" value="Add New Row" />
+      </div>
+      <div class="col-md-3 col-xs-6 form-group">
+        <button class="btn btn-danger" (click)="onRemoveSelected()">Remove Selected Row</button>
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col-md-11 col-xs-11 offset-1">
+      <ag-grid-angular style="width:100%; height:500px; margin:10px auto" id="myGrid" class="ag-theme-balham" [rowData]="rowData"
+        [columnDefs]="columnDefs" [defaultColDef]="defaultColDef" [enableSorting]="true" [enableFilter]="true" [enableColResize]="true"
+        [animateRows]="true" [stopEditingWhenGridLosesFocus]="true" [rowSelection]="rowSelection" (gridReady)="onGridReady($event)"
+        [singleClickEdit]="true">
+      </ag-grid-angular>
+    </div>
+  </div>
+</div>

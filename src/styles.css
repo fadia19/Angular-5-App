@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ag-grid/dist/styles/ag-grid.css";
+@import "~ag-grid/dist/styles/ag-theme-balham.css";
+
+body{
+    overflow-x: hidden;
+}
+/* Grid Styles */
+.ag-theme-balham .ag-header-cell-label .ag-header-cell-text{
+    text-align: center !important;
+    font-weight: bold !important;
+    color: rgb(104, 104, 104) !important;
+    font-size: 1.15em !important;
+}
+.ag-theme-balham .ag-header-cell-label > span {
+    float: none !important;
+    margin: 0 auto !important;
+}
+.ag-cell.ag-cell-not-inline-editing.ag-cell-with-height.ag-cell-no-focus.ag-cell-value{
+    font-size : 1.12em !important;
+    text-align: center !important;
+    float: none !important;
+    margin : 0 auto !important;
+    color :  #206ca1 !important;
+}
+.ag-theme-balham .ag-header-row{
+    background: rgb(255, 255, 255) !important;
+}
+/* Scroll Bar styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height : 10px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(241, 241, 241, 0.2);
+    background : rgba(66, 66, 66, 0.712); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(221, 221, 221, 0.74);
+    -webkit-box-shadow: inset 0 0 3px rgba(211, 211, 211, 0.5); 
+}
